@@ -44,4 +44,9 @@ $ mkdir src
 $ cd src
 $ touch index.js
 
+// Transpile your component (within the packages/comp-button/src directory)
+$ lerna run transpile
+
+// You should see the transpiled file in packages/comp-button/dist
+
 ```
