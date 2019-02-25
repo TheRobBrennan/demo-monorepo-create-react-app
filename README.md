@@ -65,4 +65,7 @@ $ touch setupTests.js
 //  Note that we are using "jest" and not "test" - we want to reserve the word test for running all tests (end-to-end, linting, etc)
 $ lerna run jest
 
+// Add a story for this new globally available React component (within the packages/comp-button/src directory)
+$ touch index.stories.js
+
 ```
