@@ -22,4 +22,8 @@ $ npx -p @storybook/cli@alpha sb init
 $ cd packages
 $ npx create-react-app my-react-app
 
+// If you run "npm run start" you should see an error containing a message like:
+//    If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+// Do that. Create a .env file and add that environment variable. "npm run start" should work as expected.
+
 ```
