@@ -18,5 +18,8 @@ $ npm i -D react react-dom @babel/core@^7.0.0-0 @babel/cli babel-plugin-transfor
 
 $ npx -p @storybook/cli@alpha sb init
 
+// Create your React app under ./packages/my-react-app
+$ cd packages
+$ npx create-react-app my-react-app
 
 ```
