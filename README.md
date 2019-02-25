@@ -18,5 +18,12 @@ $ npm i -D react react-dom @babel/core@^7.0.0-0 @babel/cli babel-plugin-transfor
 
 $ npx -p @storybook/cli@alpha sb init
 
+// Create your React app under ./packages/my-react-app
+$ cd packages
+$ npx create-react-app my-react-app
+
+// If you run "npm run start" you should see an error containing a message like:
+//    If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+// Do that. Create a .env file and add that environment variable. "npm run start" should work as expected.
 
 ```
