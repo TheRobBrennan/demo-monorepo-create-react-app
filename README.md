@@ -54,5 +54,15 @@ $ touch index.spec.js
 
 // See the example from the original guide
 
+// Add the jest section to your component's package.json
+//  When jest runs, it will run the setupTests.js file in the monorepo root, so let's create that file now
+$ cd <my-project>
+$ touch setupTests.js
+
+// Use the example from the original guide (note how we our using older require syntax so we do not need additionab babel configuration here)
+
+// Run jest using lerna (within the packages/comp-button/src directory)
+//  Note that we are using "jest" and not "test" - we want to reserve the word test for running all tests (end-to-end, linting, etc)
+$ lerna run jest
 
 ```

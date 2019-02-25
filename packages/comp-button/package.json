@@ -20,5 +20,10 @@
         ]
       }
     }
+  },
+  "jest": {
+    "setupFiles": [
+      "../../setupTests"
+    ]
   }
 }
