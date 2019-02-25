@@ -70,4 +70,7 @@ $ touch index.stories.js
 
 // Modify your storybook configuration in .storybook/config.js to load them from all `packages/**` directories instead of the `stories` directory
 
+// Run Storybook and verify that your newly added story is loaded
+$ npm run storybook
+
 ```
