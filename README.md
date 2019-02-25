@@ -26,4 +26,17 @@ $ npx create-react-app my-react-app
 //    If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
 // Do that. Create a .env file and add that environment variable. "npm run start" should work as expected.
 
+// Create an external component to be shared across the app
+$ cd ../packages
+$ touch package.json
+
+// Use package.json from the original guide as an example noting the following:
+//  + name - The organizational namespance for your component when installing via NPM or cross-linked Lerna
+//  + main - The compiled code that will be shipped with the build of your React app
+//  + module - The pre-compiled code that will be imported as a local run-time dependency while developing the app or running tests
+//  + transpile - An NPM script to start the transpile of your code with Babel
+//    - IMPORTANT: Note that we are using "transpile" and not "build" here; we will need a build script later to build apps using "lerna run build"
+//  + babel - This setup configures our component to transpile with Babel 7 for React
+//    - IMPORTANT: Note that because we initially installed components like `react`, `react-dom`, `@babel/core@^7.0.0-0` etc we do not need to install them here
+
 ```
