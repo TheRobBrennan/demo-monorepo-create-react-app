@@ -39,4 +39,9 @@ $ touch package.json
 //  + babel - This setup configures our component to transpile with Babel 7 for React
 //    - IMPORTANT: Note that because we initially installed components like `react`, `react-dom`, `@babel/core@^7.0.0-0` etc we do not need to install them here
 
+// Create a source directory and our component
+$ mkdir src
+$ cd src
+$ touch index.js
+
 ```
