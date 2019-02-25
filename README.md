@@ -49,4 +49,10 @@ $ lerna run transpile
 
 // You should see the transpiled file in packages/comp-button/dist
 
+// Add a test for the component (within the packages/comp-button/src directory)
+$ touch index.spec.js
+
+// See the example from the original guide
+
+
 ```
