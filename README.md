@@ -68,4 +68,6 @@ $ lerna run jest
 // Add a story for this new globally available React component (within the packages/comp-button/src directory)
 $ touch index.stories.js
 
+// Modify your storybook configuration in .storybook/config.js to load them from all `packages/**` directories instead of the `stories` directory
+
 ```
