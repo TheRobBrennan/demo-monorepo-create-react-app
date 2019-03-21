@@ -73,4 +73,34 @@ $ touch index.stories.js
 // Run Storybook and verify that your newly added story is loaded
 $ npm run storybook
 
+// Add a reference to the shared component in `packages/my-react-app/package.json`
+
+// From the root of the directory, crosslink our packages with `lerna bootstrap`
+$ lerna bootstrap
+
+// Use your shared component in the React app (see `packages/my-react-app/src/App.js`)
+// Start the React app with `npm run start` and you should see an error. This is a known issue.
+# See [Support Lerna and/or Yarn Workspaces #1333](https://github.com/facebook/create-react-app/issues/1333)
+
+// So...What is a solution if Lerna is not officially supported in Create React App (CRA)? [babel-loader-lerna-cra](https://www.npmjs.com/package/babel-loader-lerna-cra) will work; just bear in mind this will override the Webpack configuration of the specified Create-React-App projects in a Lerna repo. Proceed with caution!
+$ npm i -D babel-loader-lerna-cra
+
+// Modify the Lerna root `package.json` to define `babel-loader-lerna-cra`
+//  `imports` refers to components that the React app will need to transpile
+//  `apps` refers to where the Webpack overrides will needs to happen
+
+// Bootstrap the Webpack configs in our React app with `babel-loader-lerna-cra`
+$ npx babel-loader-lerna-cra
+
+// From the root of the directory, you may need to crosslink the packages one last time with `lerna bootstrap`
+$ lerna bootstrap
+
+// Voila!
 ```
+
+At this point, you will have a fully functioning Lerna monorepo project that will give you
+- Automatic transpilation of Lerna siblings
+- React app hot reloading
+  - This includes hot reloading of changes made to our `comp-button` component
+  - Create React App (CRA) changes will continue to be hot reloaded
+- Storybook hot reloading
