@@ -21,7 +21,7 @@ class App extends Component {
           >
             Learn React
           </a>
-          <CompButton>Our button</CompButton>
+          <CompButton>Welcome</CompButton>
         </header>
       </div>
     );
