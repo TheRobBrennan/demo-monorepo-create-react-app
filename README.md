@@ -104,3 +104,16 @@ At this point, you will have a fully functioning Lerna monorepo project that wil
   - This includes hot reloading of changes made to our `comp-button` component
   - Create React App (CRA) changes will continue to be hot reloaded
 - Storybook hot reloading
+
+### Upgrading to Storybook 5.0
+When this guide was originally created, this project was using storybook modules `^4.1.13`.
+
+The upgrade steps below are a consolidated recap of the [Storybook 5 Migration Guide](https://medium.com/storybookjs/storybook-5-migration-guide-d804b38c739d).
+
+```sh
+// Check for updates and install
+$ npx npm-check-updates '/storybook/' -u && npm install
+
+// Run the Storybook development server to verify changes have taken effect
+$ npm run storybook
+```
